@@ -65,7 +65,7 @@ public class Main {
                 if ( i == nbPerson && j == categorie) {
                     if (val != 0){
                         System.out.println("Une chambre est disponible");
-                        System.out.println("Cette chambre côute "+ val+ " euros");
+                        System.out.println("Cette chambre coute "+ val+ " euros");
                         System.out.println("Cette chambre possède : "+TabDescript[j-1]);
                     } else {
                         System.out.println("Cette chambre n'est pas disponible !!");
@@ -75,5 +75,8 @@ public class Main {
             }
             i++;
         }
+        Chambre test = new Chambre(25, 4, 2);
+        System.out.println("Quelle chambre voulez vous prendre (numéro) ?");
+        test.donnerNumero();
     }
 }

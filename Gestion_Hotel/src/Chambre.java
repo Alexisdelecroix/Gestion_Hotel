@@ -1,4 +1,4 @@
-public class Chambre {
+public class Chambre extends Hotel{
     private int numero;
     private int categorie;
     private int nbPersonnes;
@@ -33,5 +33,7 @@ public class Chambre {
         this.nbPersonnes = nbPersonnes;
     }
 
-
+    public void donnerNumero() {
+        System.out.println("Votre numéro de chambre est le " + numero);
+    }
 }
