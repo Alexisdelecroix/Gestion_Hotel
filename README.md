@@ -1,8 +1,5 @@
 # Gestion_Hotel
 
-
-# Gestion_Hotel
-
 ## Mini projet Gestion d'un hotel
 ![Preview](https://miro.medium.com/max/1400/1*h7OiiKMWuC6qX98-dmeQNA.png?raw=true)
 
