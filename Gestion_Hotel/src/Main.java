@@ -33,50 +33,52 @@ public class Main {
         String[] TabDescript = {
                 "Lavabo", "WC, Télévision", "Cabine Douche, Télévision", "WC , cabine douche, télévision" ,
                 "wc, salle de bain, douche, télévision", "2 pièces, salle de bain, douche, wc, télévision"
-
         };
 
             int nbPerson;
             int categorie;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("A combien êtes-vous ? 4 pers. max.");
-        nbPerson = sc.nextInt();
+        Chambre test = new Chambre(1,1,1);
+        test.AffichDescription();
 
-        while (nbPerson > 4 || nbPerson < 1) {
-            System.out.println("Apprend a lire, 4 pers. max. et 1 pers. minimum");
-            System.out.println("A combien êtes-vous ? 4 pers. max.");
-            nbPerson = sc.nextInt();
-        }
+//        System.out.println("A combien êtes-vous ? 4 pers. max.");
+//        nbPerson = sc.nextInt();
+//
+//        while (nbPerson > 4 || nbPerson < 1) {
+//            System.out.println("Apprend a lire, 4 pers. max. et 1 pers. minimum");
+//            System.out.println("A combien êtes-vous ? 4 pers. max.");
+//            nbPerson = sc.nextInt();
+//        }
+//
+//        System.out.println("Quelle catégorie de chambre voulez-vous ?");
+//        categorie = sc.nextInt();
+//
+//        while (categorie > 6 || categorie < 1) {
+//            System.out.println("Cette catégorie n'existe pas");
+//            System.out.println("Quelle catégorie de chambre voulez-vous ?");
+//            categorie = sc.nextInt();
+//        }
 
-        System.out.println("Quelle catégorie de chambre voulez-vous ?");
-        categorie = sc.nextInt();
-
-        while (categorie > 6 || categorie < 1) {
-            System.out.println("Cette catégorie n'existe pas");
-            System.out.println("Quelle catégorie de chambre voulez-vous ?");
-            categorie = sc.nextInt();
-        }
-
-        int j, i = 1;
-        for (int[] tab1D : TabPrix) {
-            j = 1;
-            for (int val : tab1D) {
-                if ( i == nbPerson && j == categorie) {
-                    if (val != 0){
-                        System.out.println("Une chambre est disponible");
-                        System.out.println("Cette chambre coute "+ val+ " euros");
-                        System.out.println("Cette chambre possède : "+TabDescript[j-1]);
-                    } else {
-                        System.out.println("Cette chambre n'est pas disponible !!");
-                    }
-                }
-                j++;
-            }
-            i++;
-        }
-        Chambre test = new Chambre(25, 4, 2);
-        System.out.println("Quelle chambre voulez vous prendre (numéro) ?");
-        test.donnerNumero();
+//        int j, i = 1;
+//        for (int[] tab1D : TabPrix) {
+//            j = 1;
+//            for (int val : tab1D) {
+//                if ( i == nbPerson && j == categorie) {
+//                    if (val != 0){
+//                        System.out.println("Une chambre est disponible");
+//                        System.out.println("Cette chambre coute "+ val+ " euros");
+//                        System.out.println("Cette chambre possède : "+TabDescript[j-1]);
+//                    } else {
+//                        System.out.println("Cette chambre n'est pas disponible !!");
+//                    }
+//                }
+//                j++;
+//            }
+//            i++;
+//        }
+//        Chambre test = new Chambre(25, 4, 2);
+//        System.out.println("Quelle chambre voulez vous prendre (numéro) ?");
+//        test.donnerNumero();
     }
 }
