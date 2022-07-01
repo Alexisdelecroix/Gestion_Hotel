@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Chambre{
-    private int numero;
-    private int categorie;
-    private int nbPersonnes;
+    private final int numero;
+    private final int categorie;
+    private final int nbPersonnes;
 
     Scanner sc = new Scanner(System.in);
 //    int[][] TabPrix = {
@@ -36,13 +36,12 @@ public class Chambre{
     }
 
 
-    public int DonnerPrix(int tabPrix[][]){
+    public int DonnerPrix(int[][] tabPrix){
         return ( tabPrix[nbPersonnes-1][categorie-1] );
-    } ;
+    }
 
     public void AffichDescription(String[] td) {
             System.out.println("La chambre possède : "+td[categorie -1]);
 
             }
         }
-
