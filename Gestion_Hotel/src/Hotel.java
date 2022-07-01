@@ -58,4 +58,24 @@ public class Hotel {
     public void afficherChambreNum(int PnbPers, int[][] tp, String[] td) {
 
     }
+
+    public void searchCh(int nbCham, int[][] tp){
+        int nbFind = 0;
+        for (Chambre ch : tabCh) {
+            if (ch.donnerNumero() == nbCham) {
+                System.out.println("Chambre : " + ch.donnerNumero());
+                System.out.println("Catégorie : " + ch.DonnerCateg());
+                System.out.println("Prix : " + ch.DonnerPrix(tp));
+                System.out.println("Nombre de personne : " + ch.DonnerNbPers());
+                System.out.println(" ");
+                nbFind++;
+            }
+        }
+        if(nbFind == 0){
+            System.out.println("Aucune chambre correspondant à ce numéro n'a été trouvé !");
+        }
+    }
+
+
+
 }
