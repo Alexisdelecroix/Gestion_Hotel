@@ -1,4 +1,8 @@
 import java.io.FileWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +26,7 @@ public class Main {
 //        Hotel h = new Hotel();
 //        h.AffichCh(1,tp,td);
 
-        System.out.println("A combien êtes-vous ?");
+//        System.out.println("A combien êtes-vous ?");
 
         FileWriter file;
         try
@@ -40,6 +44,27 @@ public class Main {
         catch(Exception e)
         {
             e.printStackTrace();
+        }
+
+        try
+        {
+            //étape 1: charger la classe de driver
+            Class.forName("org.postgresql.Driver");
+            //étape 2: créer l'objet de connexion
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:postgresql://localhost:5432/Gestion_Hotel","postgres","Kara59");
+            //étape 3: créer l'objet statement
+            Statement stmt = conn.createStatement();
+            ResultSet res = stmt.executeQuery("SELECT * FROM categories");
+            //étape 4: exécuter la requête
+            while(res.next())
+                System.out.println(res.getInt(1)+"  "+res.getString(2)
+                        +"  "+res.getString(3)+" "+res.getString(4));
+            //étape 5: fermez l'objet de connexion
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e);
         }
     }
 }
