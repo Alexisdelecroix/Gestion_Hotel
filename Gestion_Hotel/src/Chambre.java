@@ -4,6 +4,8 @@ public class Chambre{
     private final int numero;
     private final int categorie;
     private final int nbPersonnes;
+    private int prix;
+    private boolean occupe;
 
     Scanner sc = new Scanner(System.in);
 //    int[][] TabPrix = {
@@ -28,7 +30,7 @@ public class Chambre{
     public int donnerNumero() {
         return numero;
     }
-     public int DonnerCateg() {
+    public int DonnerCateg() {
          return categorie;
      }
     public int DonnerNbPers() {
@@ -36,8 +38,8 @@ public class Chambre{
     }
 
 
-    public int DonnerPrix(int[][] tabPrix){
-        return ( tabPrix[nbPersonnes-1][categorie-1] );
+    public int DonnerPrix(){
+        return this.prix;
     }
 
     public void AffichDescription(String[] td) {
