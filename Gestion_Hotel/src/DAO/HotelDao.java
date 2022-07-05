@@ -1,5 +1,7 @@
 package DAO;
 
+import Beans.Hotel;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,17 +13,17 @@ public class HotelDao extends Dao<Hotel>{
     }
 
     @Override
-    public boolean create(Hotel obj) {
+    public Hotel create(Hotel obj) {
         return false;
     }
 
     @Override
-    public boolean delete(Hotel obj) {
+    public Hotel delete(Hotel obj) {
         return false;
     }
 
     @Override
-    public boolean update(Hotel obj) {
+    public Hotel update(Hotel obj) {
         return false;
     }
 
@@ -48,6 +50,7 @@ public class HotelDao extends Dao<Hotel>{
         catch(Exception e){
             System.out.println(e);
         }
+
 
     }
 }

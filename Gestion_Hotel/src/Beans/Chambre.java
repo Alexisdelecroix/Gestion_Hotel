@@ -1,3 +1,5 @@
+package Beans;
+
 import java.util.Scanner;
 
 public class Chambre{
@@ -26,6 +28,41 @@ public class Chambre{
         this.nbPersonnes = nbPersonnes;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public int getCategorie() {
+        return categorie;
+    }
+
+    public int getNbPersonnes() {
+        return nbPersonnes;
+    }
+
+    public int getPrix() {
+        return prix;
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
+    }
+
+    public boolean isOccupe() {
+        return occupe;
+    }
+
+    public void setOccupe(boolean occupe) {
+        this.occupe = occupe;
+    }
+
+    public Scanner getSc() {
+        return sc;
+    }
+
+    public void setSc(Scanner sc) {
+        this.sc = sc;
+    }
 
     public int donnerNumero() {
         return numero;

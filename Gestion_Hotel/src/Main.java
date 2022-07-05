@@ -17,13 +17,13 @@ public class Main {
         // tableau des descriptions des chambres : tabDescript
         String[] td  = {"Lavabo","WC, television","Cabine douche, television","WC, cabine douche, Television","WC, Salle de bain + douche, Television","2 pièces, WC, Salle de bain + douche, Television" } ;
 
-//        Chambre c = new Chambre(30,1,3);
+//        Beans.Chambre c = new Beans.Chambre(30,1,3);
 //        System.out.println("Categorie : "+c.DonnerCateg());
 //        System.out.println("Capacite : "+c.DonnerNbPers());
 //        System.out.println("Prix : "+c.DonnerPrix(tp));
 //        c.AffichDescription(td);
 
-//        Hotel h = new Hotel();
+//        Beans.Hotel h = new Beans.Hotel();
 //        h.AffichCh(1,tp,td);
 
 //        System.out.println("A combien êtes-vous ?");
@@ -31,7 +31,7 @@ public class Main {
         FileWriter file;
         try
         {
-            file = new FileWriter("Hotel.csv");
+            file = new FileWriter("Beans.Hotel.csv");
             for(int[] e : tp){
                 for(int el : e){
                     file.append(String.valueOf(el));

@@ -10,13 +10,13 @@ public abstract class Dao <T>{
     }
 //    méthode de création
 
-    public abstract boolean create(T obj);
+    public abstract T create(T obj);
 
 
-    public abstract boolean delete(T obj);
+    public abstract T delete(T obj);
 
 
-    public abstract boolean update(T obj);
+    public abstract T update(T obj);
 
 
     public abstract T fint(int id);

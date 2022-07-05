@@ -20,10 +20,10 @@ Remarque : Lorsque TabPrix(NbPersonnes, N° Catégorie) = 0, cela signifie qu'il
 TabDescript est un tableau à une dimension qui permet de donner la description d'un chambre en fonction de sa catégorie, il contient les éléments suivants 
 ![alt text](http://isabelle.thieblemont.pagesperso-orange.fr/java/ecrans/descript.jpg?raw=true)
 
-### La classe Chambre est définie selon le format suivant :
+### La classe Beans.Chambre est définie selon le format suivant :
  
 ```
-Chambre = Classe 
+Beans.Chambre = Classe 
  privé : 
       Numéro : Entier 
       Catégorie : Entier 
@@ -42,12 +42,12 @@ Chambre = Classe
 Fclasse
 ```
 
-### La classe Hotel est également disponible pour gérer le chambres de l'hôtel et est définie selon la description suivante :
+### La classe Beans.Hotel est également disponible pour gérer le chambres de l'hôtel et est définie selon la description suivante :
  
 ```
-Hotel = classe 
+Beans.Hotel = classe 
  Privé : 
-    TabCh : tableau(1..31) de Chambre 
+    TabCh : tableau(1..31) de Beans.Chambre 
  Public : 
      Procédure AffichCh(PnbPers:entier; PtabPrix:tableau(1..4,1..6) de Entier; PtabDescript:tableau(1..6) de 
       chaine(50)) 
