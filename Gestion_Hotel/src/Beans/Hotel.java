@@ -102,7 +102,7 @@ public class Hotel {
                 ResultSet res = stmt.executeQuery("SELECT * FROM hotel");
                 //étape 4: exécuter la requête
                 while (res.next())
-                    System.out.println(res.getInt(1) + "  " + res.getString(2) + "  " + res.getString(3) + "  " + res.getString(4)
+                    System.out.println("L'id de l'hôtel est : "+res.getInt(1) + "\n" + "Le nom de l'hôtel est :  "+ res.getString(2) + "\n" + "L'adresse de l'hôtel est :  " + res.getString(3) + "\n" + "Numéro de téléphone :  " + res.getString(4)
                     );
                 //étape 5: fermez l'objet de connexion
                 conn.close();

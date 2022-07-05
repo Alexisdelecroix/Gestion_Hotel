@@ -106,13 +106,13 @@ public class Chambre {
             ResultSet res = stmt.executeQuery("SELECT * FROM chambre");
             //étape 4: exécuter la requête
             while (res.next())
-                System.out.println(res.getInt(1) + "  " + res.getInt(2) + "  " + res.getInt(3) + "  "
-                        + " " + res.getBoolean(4) + " " + res.getInt(5) + " " + res.getInt(6)
+                System.out.println("L'id de la chambre est : "+res.getInt(1) +  " La catégories est :  "+ res.getInt(2) + " Quantité de personne :  " + res.getInt(3) +
+                        "  La chambre est t'elle occupé? true or false. "+ res.getBoolean(4) + "  Prix de la chambre :  " + res.getInt(5) + "  Id de l'hôtel : " + res.getInt(6)
                 );
             ResultSet res1 = stmt.executeQuery("SELECT * FROM categories");
             //étape 4: exécuter la requête
             while (res1.next())
-                System.out.println(res1.getInt(1) + "  " + res1.getString(2));
+                System.out.println("Cette chambre est de catégories : " +res1.getInt(1) + " Les éléments a disposition sont :  " + res1.getString(2));
 
             //étape 5: fermez l'objet de connexion
             conn.close();
